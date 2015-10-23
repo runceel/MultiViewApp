@@ -1,0 +1,20 @@
+﻿<Page x:Class="MultiWindowApp.NewWindowPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MultiWindowApp"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Page.DataContext>
+        <local:NewWindowPageViewModel />
+    </Page.DataContext>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="{x:Bind ViewModel.Count.Value, Mode=OneWay}"
+                   HorizontalAlignment="Left"
+                   Margin="10,10,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Style="{StaticResource BodyTextBlockStyle}" />
+
+    </Grid>
+</Page>
